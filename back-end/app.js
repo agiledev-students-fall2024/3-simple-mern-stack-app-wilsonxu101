@@ -78,5 +78,16 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// My JSON
+app.get('/about-us', (req, res) => {
+  res.json({
+    name: "Wilson Xu",
+    bio: "Hello, I'm currently a Senior at NYU CAS majoring in Computer Science. Outside of my studies, I’m a huge fan of exploring the food scene in New York since theres so many different cuisines. I love to read fantasy novels and play minecraft with my friends. I also enjoy reading about the latest developments in cybersecurity and finance, as I believe that tech is transforming every industry. Therefore, once I graduate I hope that I can become a cyber security tech job in finance. One of my dream is to travel to japan because I really love anime and japanese food. And fun fact about me is that I currently work part time in a Sushi Resturant which is why I love to cook."  ,
+    image: "/Face.PNG" // inside front-end/public 
+  })
+})
+
+
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
